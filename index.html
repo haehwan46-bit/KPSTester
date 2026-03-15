@@ -2428,31 +2428,6 @@ html:not(.dark) .replay-intro-btn .replay-icon-wrap svg path {
   font-weight: 500;
 }
 </style>
-    <script>
-        async function checkForUpdates() {
-            try {
-                // Fetch the version.json file from GitHub
-                const response = await fetch('https://raw.githubusercontent.com/haehwan46-bit/KPSTester/main/version.json');
-                
-                // Check if the response is OK
-                if (!response.ok) {
-                    throw new Error('Failed to fetch version.json: ' + response.statusText);
-                }
-
-                const data = await response.json();
-                
-                // Check for updates, require version to be globally accessible
-                if (datam.version !== "2.0") { // You can change this hardcoded version as needed
-                    alert('An update is available! New version: ' + data.version);
-                }
-            } catch (error) {
-                console.error('Error checking for updates:', error);
-            }
-        }
-
-        // Check for updates every 10 seconds
-        setInterval(checkForUpdates, 10000);
-    </script>
 </head>
 <body>
 <canvas id="cyberspaceCanvas"></canvas>
